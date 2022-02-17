@@ -1,15 +1,23 @@
 <main>
   <h1>Form</h1>
-  <app-yes-no-button-group
-    [(value)]="yesNoAnswer"
-    label="Are you good enough in Angular ?"
+  <form
+    action=""
+    [formGroup]="form"
+    (ngSubmit)="submit()"
   >
-    <!-- Another way -->
-    <!-- <app-yes-no-button-group
-    [(value)]="yesNoAnswer"
-    (valueChange)="yesNoAnswer = $event"
-    label="Are you good enough in Angular ?"
-  > -->
-  </app-yes-no-button-group>
-  <span>{{yesNoAnswer}}</span>
+
+    <app-yes-no-button-group
+      formControlName="yesNoAnswer"
+      [(value)]="yesNoAnswer"
+      label="Are you good enough in Angular ?"
+    >
+      <!-- Another way -->
+      <!-- <app-yes-no-button-group
+      [(value)]="yesNoAnswer"
+      (valueChange)="yesNoAnswer = $event"
+      label="Are you good enough in Angular ?"
+      > -->
+    </app-yes-no-button-group>
+    <button>Submit</button>
+  </form>
 </main>
