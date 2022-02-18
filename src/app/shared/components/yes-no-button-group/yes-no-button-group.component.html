@@ -12,6 +12,7 @@
   >{{ label }}</label>
 
   <button
+    appKmItem
     role="radio"
     [attr.tabindex]="value === options.YES || value === null ? 0 : -1"
     [attr.aria-checked]="value === options.YES"
@@ -24,6 +25,7 @@
   </button>
 
   <button
+    appKmItem
     role="radio"
     [attr.tabindex]="value === options.NO || value === null ? 0 : -1"
     tabindex="-1"
