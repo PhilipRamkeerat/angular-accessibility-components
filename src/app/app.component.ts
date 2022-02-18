@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class AppComponent {
   public yesNoAnswer: string = 'no';
   public form: FormGroup = null;
+  public test: any;
 
   constructor(formBuilder: FormBuilder) {
     this.form = formBuilder.group({

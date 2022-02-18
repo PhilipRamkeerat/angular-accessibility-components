@@ -1,23 +1,27 @@
 <main>
   <h1>Form</h1>
+  <!-- Get value by ngModel provided by ControlValueAccessor  -->
+  <!-- <app-yes-no-button-group
+    [(ngModel)]="test"
+    label="Are you good enough in Angular ?"
+  ></app-yes-no-button-group>
+  <span>ngModel binding {{test}}</span> -->
+
   <form
-    action=""
     [formGroup]="form"
     (ngSubmit)="submit()"
   >
-
     <app-yes-no-button-group
       formControlName="yesNoAnswer"
-      [(value)]="yesNoAnswer"
       label="Are you good enough in Angular ?"
     >
-      <!-- Another way -->
-      <!-- <app-yes-no-button-group
+    </app-yes-no-button-group>
+    <!-- Another way -->
+    <!-- <app-yes-no-button-group
       [(value)]="yesNoAnswer"
       (valueChange)="yesNoAnswer = $event"
       label="Are you good enough in Angular ?"
       > -->
-    </app-yes-no-button-group>
     <button>Submit</button>
   </form>
 </main>
