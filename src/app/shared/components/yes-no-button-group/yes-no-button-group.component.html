@@ -11,10 +11,12 @@
     [attr.id]="id"
   >{{ label }}</label>
 
+
   <button
     appKmItem
     (focused)="activate(options.YES)"
     role="radio"
+    [attr.disabled]="disabled ? disabled : null"
     [attr.tabindex]="value === options.YES || value === null ? 0 : -1"
     [attr.aria-checked]="value === options.YES"
     type="button"
@@ -29,6 +31,7 @@
     appKmItem
     (focused)="activate(options.NO)"
     role="radio"
+    [attr.disabled]="disabled ? disabled : null"
     [attr.tabindex]="value === options.NO || value === null ? 0 : -1"
     tabindex="-1"
     [attr.aria-checked]="value === options.NO"
@@ -39,4 +42,5 @@
   >
     No
   </button>
+  <p>Is Disabled ? {{disabled}}</p>
 </div>
